@@ -1,8 +1,5 @@
-# Makefile for f2022, ecs36b
+# Makefile for f2023, ecs36b
 #
-# g++ -std=c++14 test_GPS.cpp GPS.cpp -o test_GPS
-#
-# example: $ ./test_GPS 48.88 2.3
 
 CC = g++ -std=c++14
 

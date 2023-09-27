@@ -58,12 +58,12 @@ Person::operator==
 
 void Person::dump
 (void)
-{
-  std::cout << "[Person] dump-begin" << std::endl;
-  std::cout << "name           = " << this->name << std::endl;
-  std::cout << "SSN            = " << this->SSN << std::endl;
-  std::cout << "[Person] dump-end" << std::endl;
-
+{ 
+  std::cout << "dump Person" << std::endl;
+  std::cout << "  {" << std::endl;
+  std::cout << "    name           = " << this->name << std::endl;
+  std::cout << "    SSN            = " << this->SSN << std::endl;
+  std::cout << "  }" << std::endl;
   return;
 }
 

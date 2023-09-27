@@ -107,7 +107,7 @@ JvTime::setStdTM
   this->year   = (arg_tm_ptr->tm_year) + 1900;
 
   bzero(this->tail4, 16);
-  sprintf(this->tail4, "0000");
+  snprintf(this->tail4, strlen("0000") + 1, "0000");
 
   return 0;
 }
@@ -121,6 +121,6 @@ JvTime::getTimeString
   char buffer[128];
   bzero(buffer, 128);
   std::strftime(buffer, 32, "%Y-%m-%dT%H:%M:%S+", tm_ptr);
-  sprintf(buffer, "%s%s", buffer, this->tail4);
+  snprintf(buffer, strlen(buffer) + 4 + 1, "%s%s", buffer, this->tail4);
   return (new std::string(buffer));
 }

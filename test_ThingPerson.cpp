@@ -1,5 +1,5 @@
 
-// test_GPS.cpp
+// test_ThingPerson.cpp
 
 #include "Person.h"
 #include "Thing.h"
@@ -7,8 +7,6 @@
 int
 main(int argc, char *argv[])
 {
-  // if (argc != 3) return -1;
-
   GPS_DD gps_Home_Woodland { 38.672215864622636, -121.72280111121437 };
   GPS_DD gps_TLC_UCDavis   { 38.53874868013882,  -121.7542091083306 };
 
@@ -17,6 +15,7 @@ main(int argc, char *argv[])
   GPS_DD gps_IKEA_Sacramento { 38.58681641563053, -121.55296296578501};
 
   Thing Swedish_Meatball { Felix };
+  
   Swedish_Meatball.model = "HUVUDROLL";
   Swedish_Meatball.sequence_num = "123456-0000";
   Swedish_Meatball.description = "frozen";

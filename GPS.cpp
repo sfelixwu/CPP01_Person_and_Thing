@@ -121,9 +121,10 @@ void
 GPS_DD::dump
 (void)
 {
-  std::cout << "[GPS_DD] dump-begin" << std::endl;
-  std::cout << "latitude       = " << this->latitude << std::endl;
-  std::cout << "longitude      = " << this->longitude << std::endl;
-  std::cout << "[GPS_DD] dump-end" << std::endl;
+  std::cout << "[GPS_DD] dump" << std::endl;
+  std::cout << "  {" << std::endl;
+  std::cout << "    latitude       = " << this->latitude << std::endl;
+  std::cout << "    longitude      = " << this->longitude << std::endl;
+  std::cout << "  }" << std::endl;
   return;
 }
