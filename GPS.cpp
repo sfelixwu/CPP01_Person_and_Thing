@@ -61,10 +61,11 @@ GPS_DD::getLongitude
 /*:::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::*/
 /*::  Function prototypes                                           :*/
 /*:::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::*/
-double deg2rad(double);
-double rad2deg(double);
+static double deg2rad(double);
+static double rad2deg(double);
 
-double GeoDataSource_distance(double lat1, double lon1, double lat2, double lon2, char unit) 
+static double
+GeoDataSource_distance(double lat1, double lon1, double lat2, double lon2, char unit) 
 {
   double theta, dist;
   if ((lat1 == lat2) && (lon1 == lon2))
@@ -96,7 +97,7 @@ double GeoDataSource_distance(double lat1, double lon1, double lat2, double lon2
 /*:::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::*/
 /*::  This function converts decimal degrees to radians             :*/
 /*:::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::*/
-double deg2rad(double deg)
+static double deg2rad(double deg)
 {
   return (deg * pi / 180);
 }
@@ -104,7 +105,7 @@ double deg2rad(double deg)
 /*:::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::*/
 /*::  This function converts radians to decimal degrees             :*/
 /*:::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::*/
-double rad2deg(double rad)
+static double rad2deg(double rad)
 {
   return (rad * 180 / pi);
 }
@@ -121,10 +122,9 @@ void
 GPS_DD::dump
 (void)
 {
-  std::cout << "[GPS_DD] dump" << std::endl;
-  std::cout << "  {" << std::endl;
-  std::cout << "    latitude       = " << this->latitude << std::endl;
-  std::cout << "    longitude      = " << this->longitude << std::endl;
-  std::cout << "  }" << std::endl;
+  std::cout << "[GPS_DD] dump-begin" << std::endl;
+  std::cout << "latitude       = " << this->latitude << std::endl;
+  std::cout << "longitude      = " << this->longitude << std::endl;
+  std::cout << "[GPS_DD] dump-end" << std::endl;
   return;
 }

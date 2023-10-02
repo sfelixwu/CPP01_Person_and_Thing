@@ -7,7 +7,19 @@
 int
 main(int argc, char *argv[])
 {
+  int i = 5;
+  
   GPS_DD gps_Home_Woodland { 38.672215864622636, -121.72280111121437 };
+  // [class_name: GPS_DD]
+  // [variable/object of GPDS_DD] gps_Home_Woodland
+  // [initialization, construction] { }
+  // ending ;
+
+  // the following line will cause a compiler error with given GPS.h
+  // printf("the latitude is [%f]\n", gps_Home_Woodland.latitude);
+
+  // Question: what is the difference between compiler error and run-time error?
+  
   GPS_DD gps_TLC_UCDavis   { 38.53874868013882,  -121.7542091083306 };
 
   Person Felix { "987654321", "Felix", gps_Home_Woodland };
