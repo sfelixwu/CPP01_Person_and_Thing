@@ -8,19 +8,32 @@ int
 main(int argc, char *argv[])
 {
   int i = 5;
-  
+
+  // bracket initialization
   GPS_DD gps_Home_Woodland { 38.672215864622636, -121.72280111121437 };
+  // GPS_DD gps_Home_Woodland(38.672215864622636, -121.72280111121437);
+  
   // [class_name: GPS_DD]
   // [variable/object of GPDS_DD] gps_Home_Woodland
   // [initialization, construction] { }
   // ending ;
 
   // the following line will cause a compiler error with given GPS.h
+  // gps_Home_Woodland is a GPS_DD object (what is the difference between class and object?
+  
   // printf("the latitude is [%f]\n", gps_Home_Woodland.latitude);
 
-  // Question: what is the difference between compiler error and run-time error?
+  // void * gptr = (void *) &gps_Home_Woodland;
+  // gptr = gptr + offset_lattidude;
+  // printf("the latitude is [%f]\n", *((float *) gptr));
+  // *((float *) gptr) = 20.0;
+  
+  // *** Question: what is the difference between compiler error and run-time error?
   
   GPS_DD gps_TLC_UCDavis   { 38.53874868013882,  -121.7542091083306 };
+  double distance_1;
+  distance_1 = gps_Home_Woodland.distance(gps_TLC_UCDavis);
+  distance_1 = gps_TLC_UCDavis.distance(gps_Home_Woodland);
 
   Person Felix { "987654321", "Felix", gps_Home_Woodland };
 

@@ -25,8 +25,8 @@ class GPS_DD
   
  private:
   // the following are all private "members" or and "member functions"  
-  double latitude;
   double longitude;
+  double latitude;
   
  public:
   // the following are all public "members" or and "member functions"
@@ -45,7 +45,7 @@ class GPS_DD
   // e.g., it is associated with class GPS (not the object, gps_Home_Woodland)
   // Therefore, the identifier of a member function is
   // ==> <class_name>::<member_function_name>
-  // e.g., GPS::GPS, GPS::getLatitude
+  // e.g., GPS_DD::GPS_DD, GPS_DD::getLatitude
   
   double getLatitude();
   double getLongitude();
