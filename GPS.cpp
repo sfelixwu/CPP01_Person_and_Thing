@@ -118,6 +118,14 @@ GPS_DD::distance
 				another.getLatitude(), another.getLongitude(), 'M');
 }
 
+double
+GPS_DD::operator-
+(GPS_DD another)
+{
+  return GeoDataSource_distance(this->latitude, this->longitude,
+				another.getLatitude(), another.getLongitude(), 'M');
+}
+
 void
 GPS_DD::dump
 (void)

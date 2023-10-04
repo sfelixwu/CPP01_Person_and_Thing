@@ -20,9 +20,10 @@ public:
   Person(std::string, std::string, GPS_DD);
   Person();
   void setHome(GPS_DD);
-  void setLocation(GPS_DD, JvTime);
+  void setCurrentLocation(GPS_DD, JvTime);
 
   bool operator==(Person& aPerson);
+  double operator-(GPS_DD& aLocation);
   std::string getSSN();
   std::string getName();
   GPS_DD getHome();

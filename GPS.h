@@ -50,6 +50,10 @@ class GPS_DD
   double getLatitude();
   double getLongitude();
   double distance(GPS_DD);
+
+  // operator overloading
+  double operator-(GPS_DD);
+  
   void dump();
 };
 

@@ -23,7 +23,7 @@ Person::setHome
 }
 
 void
-Person::setLocation
+Person::setCurrentLocation
 (GPS_DD arg_location, JvTime arg_time)
 {
   this->location = arg_location;
@@ -53,7 +53,14 @@ bool
 Person::operator==
 (Person& aPerson)
 {
-  return (this->SSN == aPerson.getName());
+  return (this->SSN == aPerson.getSSN());
+}
+
+double
+Person::operator-
+(GPS_DD& aLocation)
+{
+  return (this->location - aLocation);
 }
 
 void Person::dump
