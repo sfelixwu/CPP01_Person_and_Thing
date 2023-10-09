@@ -3,7 +3,8 @@
 
 GPS_DD::GPS_DD()
 {
-  this->latitude = 0.0;
+  // this->latitude = 0.0;
+  (*this).latitude = 0.0;
   this->longitude = 0.0;
 }
 
@@ -122,8 +123,16 @@ double
 GPS_DD::operator-
 (GPS_DD another)
 {
+  // double latitude = 0.0;
   return GeoDataSource_distance(this->latitude, this->longitude,
 				another.getLatitude(), another.getLongitude(), 'M');
+}
+
+double
+GPS_DD::operator-
+(int x)
+{
+  return 9.2;
 }
 
 void

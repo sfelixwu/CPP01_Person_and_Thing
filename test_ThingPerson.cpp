@@ -33,14 +33,25 @@ main(int argc, char *argv[])
   GPS_DD gps_TLC_UCDavis   { 38.53874868013882,  -121.7542091083306 };
   double distance_1;
 
+  // line 1
   distance_1 = gps_Home_Woodland.distance(gps_TLC_UCDavis);
+  distance_1 = (&gps_Home_Woodland)->distance(gps_TLC_UCDavis);
   printf("distance 1 = %lf miles\n", distance_1);
-  
+
+  // line 2
   distance_1 = gps_TLC_UCDavis.distance(gps_Home_Woodland);
   printf("distance 1 = %lf miles\n", distance_1);
 
+  // line 3
   // operator overloading
   distance_1 = gps_Home_Woodland - gps_TLC_UCDavis;
+  // distance_1 = gps_Home_Woodland.operator-(gps_TLC_UCDavis);
+  
+  printf("distance 1 = %lf miles (operator overloading)\n", distance_1);
+
+  distance_1 = gps_Home_Woodland - 3;
+  // distance_1 = gps_Home_Woodland.operator-(gps_TLC_UCDavis);
+  
   printf("distance 1 = %lf miles (operator overloading)\n", distance_1);
 
   // try a bit more --

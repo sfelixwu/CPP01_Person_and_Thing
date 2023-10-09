@@ -22,7 +22,11 @@ public:
   void setHome(GPS_DD);
   void setCurrentLocation(GPS_DD, JvTime);
 
+  // call by value
+  // call by reference (by adding "&" at the end of class name)
+  // call by name
   bool operator==(Person& aPerson);
+  int  operator==(Person  bPerson);
   double operator-(GPS_DD& aLocation);
   std::string getSSN();
   std::string getName();

@@ -53,7 +53,16 @@ bool
 Person::operator==
 (Person& aPerson)
 {
+  // if I change the internal value of aPerson here, then this change will be observed.
   return (this->SSN == aPerson.getSSN());
+}
+
+int
+Person::operator==
+(Person  bPerson)
+{
+  // if I change the internal value of aPerson here, then this change will be observed.
+  return 5;
 }
 
 double

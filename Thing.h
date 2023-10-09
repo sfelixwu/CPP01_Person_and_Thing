@@ -12,6 +12,11 @@ class Thing
  private:
  protected:
  public:
+  // member attribute for the object of this class
+  // std::string class_name;
+
+  // member attribute for the class shared among all the objects
+  static std::string class_name;
   
   std::string model;
   std::string sequence_num;

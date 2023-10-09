@@ -1,6 +1,8 @@
 
 #include "Thing.h"
 
+std::string Thing::class_name = { "Thing1234567890" };
+
 void
 myPrintLog
 (std::string content, std::string fname)
@@ -9,6 +11,28 @@ myPrintLog
   
   FILE *log_f = fopen(fname.c_str(), "a");
   if (log_f == NULL) return;
+
+  // [int] [x] [= 5];
+  // [FILE *] [log_f] [= fopen ( fname.c_str(), "a")];
+  // data type {FILE *, int}
+  // variable name {log_f, x}
+
+  // a pointer is a data type, except specifying what data it is pointing to.
+  // int *   [a pointer, type => int]
+  // FILE *  [a pointer, type => FILE]
+  // GPS_DD * [a pointer, type => GPS_DD, in GPS.cpp, this->latitude]
+
+  // specify a pointer type
+  // [int *] int_ptr = NULL;
+  
+  // dereference a pointer
+  // printf("%d\n", [*int_ptr]);
+
+  // obtain the reference or address of an integer;
+  // int x = 5;
+  // int_ptr = &x; // extracting the address of x
+  // printf("%d\n", [*int_ptr]);
+  
   
   JvTime *jv_ptr = getNowJvTime();
   std::string *str_ptr = jv_ptr->getTimeString();
@@ -23,6 +47,9 @@ myPrintLog
 Thing::Thing
 (void)
 {
+  // this->class_name = "Thing";
+  printf("%s\n", (this->class_name).c_str());
+  
   this->model = "";
   this->sequence_num = "";
   this->description = "";
@@ -31,6 +58,9 @@ Thing::Thing
 Thing::Thing
 (Person arg_owner)
 {
+  // this->class_name = "Thing";
+  printf("%s\n", (this->class_name).c_str());
+
   this->model = "";
   this->sequence_num = "";
   this->description = "";

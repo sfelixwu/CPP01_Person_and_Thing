@@ -2,8 +2,7 @@
 #include "JvTime.h"
 #include "string.h"
 
-JvTime *
-getNowJvTime
+JvTime         *            getNowJvTime
 (void)
 {
   time_t ticks; 

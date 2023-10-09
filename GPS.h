@@ -53,6 +53,7 @@ class GPS_DD
 
   // operator overloading
   double operator-(GPS_DD);
+  double operator-(int);
   
   void dump();
 };
