@@ -38,6 +38,8 @@ main(int argc, char *argv[])
   distance_1 = (&gps_Home_Woodland)->distance(gps_TLC_UCDavis);
   printf("distance 1 = %lf miles\n", distance_1);
 
+  // if (Person1 == Person2)
+    
   // line 2
   distance_1 = gps_TLC_UCDavis.distance(gps_Home_Woodland);
   printf("distance 1 = %lf miles\n", distance_1);
